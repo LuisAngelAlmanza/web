@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Programación Web Avanzada</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hsg</title>
+	<style type="text/css">
+		.div {
+			width: 80%;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<canvas width="700" height="800" id='canvas'></canvas>
+	</div>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+		
+
+		if (canvas.getContext) {
+			var ctx = canvas.getContext('2d');
+			var aux = false;
+
+			canvas.addEventListener('mousedown', function(evt){
+				aux = true;
+			});
+
+			canvas.addEventListener('mouseup', function(evt){
+				aux=false;
+			});
+
+			canvas.addEventListener('mousemove', function(evt){
+
+				if (aux) {
+				ctx.beginPath();
+				ctx.arc(evt.layerX, evt.layerY, 5, 0, 2*Math.PI);
+				ctx.fill();
+				}
+			});
+		}
+	</script>
+</body>
+</html>

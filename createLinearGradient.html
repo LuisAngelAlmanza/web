@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hsg</title>
+	<style type="text/css">
+		.div {
+			width: 80%;
+			height: 600px;
+			background-color: withe;
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<canvas id='canvas'></canvas>
+	</div>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+
+		if (canvas.getContext) {
+			var ctx = canvas.getContext('2d');
+
+			
+			var gradient = ctx.createLinearGradient(20,0, 220,0);
+
+			gradient.addColorStop(0, 'red');
+			gradient.addColorStop(1, 'white');
+
+			ctx.fillStyle = gradient;
+			ctx.fillRect(20, 20, 200, 100);
+			
+		}
+	</script>
+</body>
+</html>

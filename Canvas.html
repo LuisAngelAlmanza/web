@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hsg</title>
+	<style type="text/css">
+		.div {
+			width: 80%;
+			height: 600px;
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<canvas id='canvas'></canvas>
+	</div>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+
+		if (canvas.getContext) {
+			var ctx = canvas.getContext('2d');
+
+			ctx.fillStyle='rgb(0,0,200)';
+			ctx.fillRect(0,0,50,50);
+
+			ctx.fillStyle='rgba(200,0,0, 0.5)';
+			ctx.fillRect(20,20,50,50);
+		}
+	</script>
+</body>
+</html>

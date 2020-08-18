@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Programación Web Avanzada</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hsg</title>
+	<style type="text/css">
+		.div {
+			width: 80%;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<canvas width="700" height="800" id='canvas'></canvas>
+	</div>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+
+
+		if (canvas.getContext) {
+			var ctx = canvas.getContext('2d');
+			var aux = canvas.getContext('2d');
+			var aux1 = canvas.getContext('2d');
+			var aux2 = canvas.getContext('2d');
+			var aux3 = canvas.getContext('2d');
+			var aux4 = canvas.getContext('2d');
+			var aux5 = canvas.getContext('2d');
+
+			//ZAPATOS
+			aux4.fillStyle="black";
+			aux4.fillRect(380,500,45,20);
+
+			aux4.fillStyle="black";
+			aux4.fillRect(286,500,45,20);
+
+			//PANTALON
+			aux2.moveTo(301,320);
+			aux2.lineTo(301,500);
+			aux2.lineTo(330,500);
+			aux2.lineTo(357,320);
+			aux2.strokeStyle="gray";
+			aux2.fillStyle="gray";
+			aux2.fill();
+			aux2.stroke();
+
+			aux3.moveTo(409,320);
+			aux3.lineTo(409,500);
+			aux3.lineTo(380,500);
+			aux3.lineTo(357,320);
+			aux3.strokeStyle="gray";
+			aux3.fillStyle="gray";
+			aux3.fill();
+			aux3.stroke();
+
+			//MANOS
+			aux5.beginPath();
+			aux5.arc(260,300,15,0,2 * Math.PI);
+			aux5.strokeStyle="#eab26d";
+			aux5.fillStyle = "#eab26d";
+			aux5.fill();
+			aux5.stroke();
+
+			aux5.beginPath();
+			aux5.arc(449,300,15,0,2 * Math.PI);
+			aux5.strokeStyle="#eab26d";
+			aux5.fillStyle = "#eab26d";
+			aux5.fill();
+			aux5.stroke();
+
+			//CARA
+			ctx.fillStyle="#eab26d";
+			ctx.fillRect(335,130,35,40);
+
+			ctx.beginPath();
+			ctx.arc(350,110,49,0,2 * Math.PI);
+			ctx.strokeStyle="#eab26d";
+			ctx.fillStyle = "#eab26d";
+			ctx.fill();
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(335,105,7,0,2 * Math.PI);
+			ctx.fillStyle = "black";
+			ctx.fill();
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(365,105,7,0,2 * Math.PI);
+			ctx.fillStyle = "black";
+			ctx.fill();
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(350,125,15,0,1 * Math.PI);
+			ctx.fillStyle = "black";
+			ctx.fill();
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(350,125,4,0,1 * Math.PI);
+			ctx.strokeStyle="white";
+			ctx.fillStyle = "white";
+			ctx.fill();
+			ctx.stroke();
+
+			//GORRA
+			aux1.beginPath();
+			aux1.arc(350,90,50,3.1,0 * Math.PI);
+			aux1.strokeStyle="black";
+			aux1.fillStyle = "black";
+			aux1.fill();
+			aux1.stroke();
+
+			aux1.beginPath();
+			aux1.arc(390,90,25,3.2,0 * Math.PI);
+			aux1.strokeStyle="black";
+			aux1.fillStyle="#5C7CF5";
+			aux1.fill();
+			aux1.stroke();
+
+			//CUERPO
+
+			ctx.fillStyle="black";
+			ctx.fillRect(300,170,110,150);
+			ctx.fill();
+
+			ctx.fillStyle="red";
+			ctx.fillRect(315,185,80,25);
+			ctx.fill();
+
+			ctx.font="20px Khmer UI";
+			ctx.fillStyle="white";
+			ctx.fillText("Supreme", 318,205);
+			ctx.stroke();
+
+			//BRAZOS
+
+			ctx.moveTo(300,171);
+			ctx.lineTo(250,290);
+			ctx.lineTo(274,290);
+			ctx.lineTo(300,220);
+			ctx.strokeStyle="black";
+			ctx.fillStyle = "black";
+			ctx.fill();
+			ctx.stroke();
+
+			aux.moveTo(410,170);
+			aux.lineTo(460,290);
+			aux.lineTo(435,290);
+			aux.lineTo(410,220);
+			aux.strokeStyle="black";
+			aux.fillStyle="black";
+			aux.fill();
+			aux.stroke();
+		}
+	</script>
+</body>
+</html>

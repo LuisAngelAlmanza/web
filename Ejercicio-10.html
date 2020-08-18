@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Programación Web Avanzada</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hsg</title>
+	<style type="text/css">
+		.div {
+			width: 80%;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<canvas width="700" height="800" id='canvas'></canvas>
+	</div>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+
+
+		if (canvas.getContext) {
+			var ctx = canvas.getContext('2d');
+			
+			canvas.addEventListener("click", function(evt){
+				console.log("hola");
+
+				ctx.filStyle = 'rgb(0,0,200)';
+				ctx.beginPath();
+				ctx.arc(evt.layerX, evt.layerY, 5, 0, 2*Math.PI);
+				ctx.fill();
+
+				//ctx.filRect(evt.layerX, evt.layerY, 20, 20);
+
+			})
+		}
+	</script>
+</body>
+</html>
