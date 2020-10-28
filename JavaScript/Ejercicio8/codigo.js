@@ -2,7 +2,6 @@ function texto()
 {
   var frase=prompt("Escribe una frase").toLowerCase();
  
-  // eliminamos los espacios en blanco
   frase=frase.split(' ').join('')
  
   for (var i=0;i<frase.length;i++){
